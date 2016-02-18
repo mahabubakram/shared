@@ -1,0 +1,179 @@
+
+<?php $__env->startSection('main'); ?>
+
+        <!-- start: bypass :P validation error show -->
+
+        <?php if($errors->any()): ?>
+            <div class="flash alert">
+                <ul class="text-error">
+                    <?php echo implode('', $errors->all('<li class="error">:message</li>')); ?>
+
+                </ul>
+            </div>
+        <?php endif; ?>
+        <!-- end: bypass validation error show -->
+
+
+	<!-- start: Wrapper -->
+	<div id="wrapper">
+
+		<!-- start: Container -->
+		<div class="container">
+
+			<!-- start: Row -->
+			<div class="row">
+
+				<!-- start: Create User FORM -->
+				<div class="span8">
+					<div class="title"><h3>User Information</h3></div>
+					<form class="form-horizontal">
+
+
+                        <div class="user-info">
+                        <div class='form-group'>
+                            <div class="row">
+                            <div class='form-group'>
+                                <span class="col-md-2 control-label user-key">User Name:</span>
+                                <div class="col-md-8">
+                                <label class="col-md-8 control-label user-value" style="text-align: left"><?php echo $user->username; ?></label>
+                                </div>
+                            </div>
+                            </div>
+
+                            <div class="row">
+                            <div class='form-group'>
+                                <span class="col-md-2 control-label user-key">Email:</span>
+                                <div class="col-md-8">
+                                <label class="col-md-6 control-label user-value" style="text-align: left"><?php echo $user->email; ?></label>
+                                </div>
+                            </div>
+                            </div>
+
+                            <div class="row">
+                            <div class='form-group'>
+                                <span class="col-md-2 control-label user-key">Firstname:</span>
+                                <div class="col-md-8">
+                                <label class="col-md-6 control-label user-value" style="text-align: left"><?php echo $user->firstname; ?></label>
+                                </div>
+                            </div>
+                            </div>
+
+                            <div class="row">
+                            <div class='form-group'>
+                                <span class="col-md-2 control-label user-key">Lastname:</span>
+                                <div class="col-md-8">
+                                <label class="col-md-6 control-label user-value" style="text-align: left"><?php echo $user->lastname; ?></label>
+
+
+                                </div>
+                            </div>
+                            </div>
+                            </div>
+
+                              <div class="row">
+                              <div class='form-group'>
+                                  <div class="col-md-8" style="float: right; padding-right: 5px; padding-bottom: 5px;">
+                                  <?php echo link_to_route('users.edit', 'Edit', array($user->id), array('class' => 'btn btn-primary')); ?>
+
+                                  </div>
+                              </div>
+                              </div>
+                            </div>
+                            <!--End of user info-->
+
+                            <div class="user-payment-info">
+                            <div class="row">
+                            <div class='form-group'>
+                                <span class="col-md-2 control-label user-key">Bank Information:</span>
+                                <div class="col-md-8">
+                                <?php if($user->bank > 0): ?>
+                                <label class="col-md-6 control-label user-value" style="text-align: left;"><input type="checkbox" disabled="disabled" checked="checked"></label>
+                                <?php else: ?>
+                                <label class="col-md-6 control-label user-value not-added" style="text-align: left;"><input type="checkbox" disabled="disabled"> Not Added</label>
+                                <?php endif; ?>
+                                </div>
+                            </div>
+                            </div>
+
+                            <div class="row">
+                            <div class='form-group'>
+                                <span class="col-md-2 control-label user-key user-line">Bkash Information:</span>
+                                <div class="col-md-8">
+                                <?php if($user->bkash > 0): ?>
+                                <label class="col-md-6 control-label user-value user-line" style="text-align: left;"><input type="checkbox" disabled="disabled" checked="checked"></label>
+                                <?php else: ?>
+                                <label class="col-md-6 control-label user-value user-line not-added" style="text-align: left;"><input type="checkbox" disabled="disabled"> Not Added</label>
+                                <?php endif; ?>
+                                </div>
+                            </div>
+                            </div>
+
+                            <div class="row">
+                            <div class='form-group'>
+                                <span class="col-md-2 control-label user-key user-line">Phone Number:</span>
+                                <div class="col-md-8">
+                                <?php if($user->phone_number > 0): ?>
+                                <label class="col-md-6 control-label user-value user-line" style="text-align: left;"><input type="checkbox" disabled="disabled" checked="checked"></label>
+                                <?php else: ?>
+                                <label class="col-md-6 control-label user-value user-line not-added" style="text-align: left;"><input type="checkbox" disabled="disabled"> Not Added</label>
+                                <?php endif; ?>
+                                </div>
+                            </div>
+                            </div>
+
+
+                            <div class="row">
+                            <div class='form-group'>
+                                <span class="col-md-2 control-label user-key user-line">Credit Card:</span>
+                                <div class="col-md-8">
+                                <?php if($user->credit_card > 0): ?>
+                                <label class="col-md-6 control-label user-value user-line" style="text-align: left;"><input type="checkbox" disabled="disabled" checked="checked"></label>
+                                <?php else: ?>
+                                <label class="col-md-6 control-label user-value user-line not-added" style="text-align: left;"><input type="checkbox" disabled="disabled"> Not Added</label>
+                                <?php endif; ?>
+                                </div>
+                            </div>
+                            </div>
+
+
+                            <div class="row">
+                            <div class='form-group'>
+                                <span class="col-md-2 control-label user-key user-line">Account Number:</span>
+                                <div class="col-md-8">
+                                <?php if(strlen($user->account_number) > 0): ?>
+                                <label class="col-md-6 control-label user-value user-line" style="text-align: left;"><input type="checkbox" disabled="disabled" checked="checked"></label>
+                                <?php else: ?>
+                                <label class="col-md-6 control-label user-value user-line not-added" style="text-align: left;">Not yet generated</label>
+                                <?php endif; ?>
+                                </div>
+                            </div>
+                            </div>
+
+                            <div class="row">
+                            <div class='form-group'>
+                                <div class="col-md-8" style="float: right; padding-right: 5px; padding-bottom: 5px;">
+                                <?php echo link_to_route('settings.show', 'Settings Edit', array(Auth::user()->id), array('class' => 'btn btn-primary')); ?>
+
+                                </div>
+                            </div>
+                            </div>
+
+                            </div>
+                            <!--end: user payment info-->
+
+
+					</form>
+
+                </div>
+                <!-- end: Create User Form -->
+            </div>
+            <!-- end: Row -->
+        </div>
+        <!-- end: Container -->
+        </div>
+        <!-- end: Wrapper -->
+
+
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.user_account', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

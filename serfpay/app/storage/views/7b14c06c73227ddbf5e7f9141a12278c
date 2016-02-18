@@ -1,0 +1,184 @@
+<!-- start: Footer Menu -->
+	<div id="footer-menu" class="hidden-tablet hidden-phone">
+
+		<!-- start: Container -->
+		<div class="container">
+			
+			<!-- start: Row -->
+			<div class="row">
+
+				<!-- start: Footer Menu Logo -->
+				<div class="span2">
+					<div id="footer-menu-logo">
+						<a href="#"><img src="<?php echo asset('img/logoSerfFooterMenu.png'); ?>" alt="logo" /></a>
+					</div>
+				</div>
+				<!-- end: Footer Menu Logo -->
+
+				<!-- start: Footer Menu Links-->
+				<div class="span9">
+					
+					<div id="footer-menu-links">
+
+						<ul id="footer-nav">
+
+							<li><a href="#">Home</a></li>
+
+							<li><a href="#">About</a></li>
+
+							<li><a href="#">Services</a></li>
+							
+							<li><a href="#">Contact</a></li>
+
+						</ul>
+
+					</div>
+					
+				</div>
+				<!-- end: Footer Menu Links-->
+
+				<!-- start: Footer Menu Back To Top -->
+				<div class="span1">
+						
+					<div id="footer-menu-back-to-top">
+						<a href="#"></a>
+					</div>
+				
+				</div>
+				<!-- end: Footer Menu Back To Top -->
+			
+			</div>
+			<!-- end: Row -->
+			
+		</div>
+		<!-- end: Container  -->	
+
+	</div>	
+	<!-- end: Footer Menu -->
+
+	<!-- start: Footer -->
+	<div id="footer">
+		
+		<!-- start: Container -->
+		<div class="container">
+			
+			<!-- start: Row -->
+			<div class="row">
+
+				<!-- start: About -->
+				<div class="span3">
+					
+					<h3>About Us</h3>
+					<p>
+						We serve the best and the fastest online transation portal for the first time in Bangladesh. We are a dedicated team to support round the clock with our best solution system.
+					</p>
+						
+				</div>
+				<!-- end: About -->
+
+				<!-- start: Photo Stream -->
+				<div class="span3">
+
+				</div>
+				<!-- end: Photo Stream -->
+
+				<div class="span6">
+				
+					<!-- start: Follow Us -->
+					<h3>Follow Us!</h3>
+					<ul class="social-grid">
+						<li>
+							<div class="social-item">				
+								<div class="social-info-wrap">
+									<div class="social-info">
+										<div class="social-info-front social-twitter">
+											<a href="#"></a>
+										</div>
+										<div class="social-info-back social-twitter-hover">
+											<a href="#"></a>
+										</div>	
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="social-item">				
+								<div class="social-info-wrap">
+									<div class="social-info">
+										<div class="social-info-front social-facebook">
+											<a href="#"></a>
+										</div>
+										<div class="social-info-back social-facebook-hover">
+											<a href="#"></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="social-item">				
+								<div class="social-info-wrap">
+									<div class="social-info">
+										<div class="social-info-front social-youtube">
+											<a href="#"></a>
+										</div>
+										<div class="social-info-back social-youtube-hover">
+											<a href="#"></a>
+										</div>	
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="social-item">				
+								<div class="social-info-wrap">
+									<div class="social-info">
+										<div class="social-info-front social-small-rss">
+											<a href="#"></a>
+										</div>
+										<div class="social-info-back social-rss-hover">
+											<a href="#"></a>
+										</div>	
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<!-- end: Follow Us -->
+				
+					<!-- start: Newsletter -->
+					<form id="newsletter">
+						<h3>Newsletter</h3>
+						<p>Please leave us your email</p>
+						<label for="newsletter_input">@:</label>
+						<input type="text" id="newsletter_input"/>
+						<input type="submit" id="newsletter_submit" value="submit"disabled>
+					</form>
+					<!-- end: Newsletter -->
+				
+				</div>
+				
+			</div>
+			<!-- end: Row -->	
+			
+		</div>
+		<!-- end: Container  -->
+
+	</div>
+	<!-- end: Footer -->
+
+	<!-- start: Copyright -->
+	<div id="copyright">
+	
+		<!-- start: Container -->
+		<div class="container">
+		
+			<p>
+				&copy; 2014, SERF Payment Solution. <a href="#" alt="SERF Solutions">SERF Payment</a> designed by SERF Solutions inc <img src="<?php echo asset('img/logoSERF.jpg'); ?>" alt="Poland" style="margin-top:-4px; height: 30px;">
+			</p>
+	
+		</div>
+		<!-- end: Container  -->
+		
+	</div>	
+	<!-- end: Copyright -->

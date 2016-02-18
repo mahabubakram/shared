@@ -1,0 +1,256 @@
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 40px;
+}
+
+.alert{
+    margin: 10px 60px;
+    padding-left: 50px;
+}
+
+.header-welcome-msg{
+    padding-top: 15px;
+    line-height: 20px;
+    color: #f8f8f8;
+}
+
+/*
+ * Global add-ons
+ */
+
+.sub-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+.navbar-fixed-top {
+  border: 0;
+}
+
+.navbar-inverse{
+    background: #4cae4c;
+}
+
+.navbar-nav{
+    padding-left: 90px;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #f5f5f5;
+
+}
+
+.navbar-inverse .navbar-nav > li > a:hover{
+    color: #ffffff;
+    background-color:#5cb85c;
+    font-size: 14px;
+}
+
+
+.navbar-inverse .navbar-brand {
+    font-weight: bold;
+    font-style: italic;
+    font-size: xx-large;
+    color:#ffffff;
+    padding-right: 5px;
+}
+
+.navbar-inverse .navbar-brand2 {
+    font-weight: bold;
+    font-style: italic;
+    font-size:16px;
+    color:#DADADA;
+    float: left;
+    height: 52px;
+    line-height: 30px;
+    padding-top: 15px;
+    text-decoration: none;
+}
+
+/*
+ * Sidebar
+ */
+
+/* Hide for mobile, show later */
+.sidebar {
+  display: none;
+}
+
+@media (min-width: 700px) {
+  .sidebar {
+      shape-rendering: 5px;
+    position: fixed;
+    top: 51px;
+    bottom: 30px;
+    left: 7px;
+    z-index: 1000;
+    display: block;
+    padding: 15px;
+    margin-top: 7px;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    background-color:#ffffff;
+    border: 1px groove lightseagreen;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px lightgreen;
+      font-size: 13px;
+  }
+}
+
+/* Sidebar navigation */
+.nav-sidebar {
+  margin-right: -21px; /* 20px padding + 1px border */
+  margin-bottom: 20px;
+  margin-left: -20px;
+}
+.nav-sidebar > li > a {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+  color: #fff;
+  background-color: #428bca;
+}
+
+.sidebar-block{
+    margin-bottom: 25px;
+}
+
+.sidebar-search-button{
+    margin: 10px 0;
+}
+
+.sidebar-heading{
+    color:#3c763d;
+    font-style: italic;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.hrformat{
+    border-style: solid none none;
+    border-width: 2px 0 0;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+
+.bottom-copyright {
+    color: #a3aaaf;
+    font-size: 13px;
+}
+
+/*
+ * Main content
+ */
+
+.main {
+  padding: 20px;
+}
+@media (min-width: 700px) {
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+.main .page-header {
+  margin-top: 0;
+}
+
+
+/*
+ * Placeholder dashboard ideas
+ */
+
+.placeholders {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.placeholders h4 {
+  margin-bottom: 0;
+}
+.placeholder {
+  margin-bottom: 20px;
+}
+.placeholder img {
+  display: inline-block;
+  border-radius: 50%;
+}
+
+#circle {
+    width: 50px;
+    height: 50px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+}
+
+.circle-success {
+    width: 80px;
+    height: 80px;
+    background: #77b168;
+    -moz-border-radius: 40px;
+    -webkit-border-radius: 40px;
+    border-radius: 40px;
+    border: solid 2px #419641;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    margin: auto;
+    position: relative;
+    font-size: 13px;
+    color: #fff;
+    z-index: 100;
+}
+
+.circle-progress {
+    width: 80px;
+    height: 80px;
+    background: #DADADA;
+    -moz-border-radius: 40px;
+    -webkit-border-radius: 40px;
+    border-radius: 40px;
+    border: solid 3px #419641;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    margin: auto;
+    position: relative;
+    font-size: 13px;
+    color: #262626;
+    z-index: 100;
+}
+
+.circle-unexecuted {
+    width: 80px;
+    height: 80px;
+    background: #DADADA;
+    -moz-border-radius: 40px;
+    -webkit-border-radius: 40px;
+    border-radius: 40px;
+    border: solid 1px #adadad;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    margin: auto;
+    position: relative;
+    font-size: 13px;
+    color: #262626;
+    z-index: 100;
+}
+
+
+/* Agent Login */
+.agent-login-link{
+ margin-top: 20px;
+}

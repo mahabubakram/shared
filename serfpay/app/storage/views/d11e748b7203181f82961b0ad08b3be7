@@ -1,0 +1,136 @@
+<?php $__env->startSection('main'); ?>
+
+        <!-- start: bypass :P validation error show -->
+
+        <?php if($errors->any()): ?>
+            <div class="flash alert">
+                <ul class="text-error">
+                    <?php echo implode('', $errors->all('<li class="error">:message</li>')); ?>
+
+                </ul>
+            </div>
+        <?php endif; ?>
+        <!-- end: bypass validation error show -->
+
+
+	<!-- start: Wrapper -->
+	<div id="wrapper">
+
+		<!-- start: Container -->
+		<div class="container">
+
+			<!-- start: Row -->
+			<div class="row">
+
+				<!-- start: Create User FORM -->
+				<div class="span6">
+					<div class="title"><h3>Create User</h3></div>
+
+                    <?php echo Form::open(array('route' => 'users.store')); ?>
+
+                        <ul>
+
+                            <li>
+                                <?php echo Form::label('username', 'Username:'); ?>
+
+                                <?php echo Form::text('username', '', array('class'=>'createUser')); ?>
+
+                            </li>
+                            <?php if($errors->any()): ?>
+                                <ul class="text-error">
+                                    <?php echo $errors->first('username'); ?>
+                                </ul>
+                            <?php endif; ?>
+
+                            <li>
+                                <?php echo Form::label('email', 'Email:'); ?>
+
+                                <?php echo Form::email('email', '', array('class'=>'createUser')); ?>
+
+                            </li>
+                            <?php if($errors->any()): ?>
+                                <ul class="text-error">
+                                    <?php /*<?php echo implode('', $errors->all('<li class="error">:message</li>')); ?>*/ ?>
+                                    <?php echo $errors->first('email'); ?>
+                                </ul>
+                            <?php endif; ?>
+
+
+                            <li>
+                                <?php echo Form::label('firstname', 'Firstname:'); ?>
+
+                                <?php echo Form::text('firstname', '', array('class'=>'createUser')); ?>
+
+                            </li>
+                            <?php if($errors->any()): ?>
+                                <ul class="text-error">
+                                    <?php echo $errors->first('firstname'); ?>
+                                </ul>
+                            <?php endif; ?>
+
+                            <li>
+                                <?php echo Form::label('lastname', 'Lastname:'); ?>
+
+                                <?php echo Form::text('lastname', '', array('class'=>'createUser')); ?>
+
+                            </li>
+                            <?php if($errors->any()): ?>
+                                <ul class="text-error">
+                                    <?php echo $errors->first('lastname'); ?>
+                                </ul>
+                            <?php endif; ?>
+
+                            <li>
+                                <?php echo Form::label('password', 'Password:'); ?>
+
+                                <?php echo Form::password('password', array('class'=>'createUser')); ?>
+
+                            </li>
+                            <?php if($errors->any()): ?>
+                                <ul class="text-error">
+                                    <?php echo $errors->first('password'); ?>
+                                </ul>
+                            <?php endif; ?>
+
+                            <li>
+                                <?php echo Form::label('confirm_password', 'Confirm Password:'); ?>
+
+                                <?php echo Form::password('confirm_password', array('class'=>'createUser')); ?>
+
+                            </li>
+                            <?php if($errors->any()): ?>
+                                <ul class="text-error">
+                                    <?php echo $errors->first('confirm_password'); ?>
+                                </ul>
+                            <?php endif; ?>
+
+                            <li>
+                                <?php echo Form::submit('Submit',array('class' => 'btn btn-primary')); ?>
+
+                            </li>
+                        </ul>
+                    <?php echo Form::close(); ?>
+
+
+                    <!-- start: validation error show -->
+<?php /*                    <?php if($errors->any()): ?>
+                        <ul>
+                            <?php echo implode('', $errors->all('<li class="error">:message</li>')); ?>
+
+                        </ul>
+                    <?php endif; ?>*/ ?>
+                    <!-- end: validation error show -->
+
+                </div>
+                <!-- end: Create User Form -->
+            </div>
+            <!-- end: Row -->
+        </div>
+        <!-- end: Container -->
+        </div>
+        <!-- end: Wrapper -->
+
+
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.user', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

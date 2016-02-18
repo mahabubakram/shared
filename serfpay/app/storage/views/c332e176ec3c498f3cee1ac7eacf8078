@@ -1,0 +1,53 @@
+<?php $__env->startSection('main'); ?>
+
+
+	<!-- start: Wrapper -->
+	<div id="wrapper">
+
+		<!-- start: Container -->
+		<div class="container">
+
+			<!-- start: Row -->
+			<div class="row">
+    			<!-- start: Edit User FORM -->
+	    		<div class="span6">
+		        	<div class="title"><h3>User Information</h3></div>
+
+                        <!-- if there are creation errors, they will show here -->
+                        <?php echo HTML::ul($errors->all()); ?>
+
+
+                        <?php echo Form::model($user, array('route' => array('users.update', $user->id), 'method' => 'PUT')); ?>
+
+
+                            <div class="form-group">
+                                <?php echo Form::label('firstname', 'Firstname:'); ?>
+
+                                <?php echo Form::text('firstname', $user->firstname  , array('class' => 'form-control')); ?>
+
+                            </div>
+
+                            <div class="form-group">
+                                <?php echo Form::label('lastname', 'Lastname:'); ?>
+
+                                <?php echo Form::text('lastname', null, array('class' => 'form-control')); ?>
+
+                            </div>
+
+                            <?php echo Form::submit('Edit the User!', array('class' => 'btn btn-primary')); ?>
+
+
+                        <?php echo Form::close(); ?>
+
+
+                </div>
+                <!-- end: Edit FORM-->
+            </div>
+            <!-- end: Row -->
+        </div>
+        <!-- end: Container -->
+    </div>
+        <!-- end: Wrapper -->
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.user', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

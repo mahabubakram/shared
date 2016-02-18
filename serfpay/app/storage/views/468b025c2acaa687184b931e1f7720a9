@@ -1,0 +1,116 @@
+<?php $__env->startSection('main'); ?>
+
+	<!-- start: Wrapper -->
+	<div id="wrapper">
+
+		<!-- start: Container -->
+		<div class="container">
+
+			<!-- start: Row -->
+			<div class="row">
+
+				<!-- start: Login Form -->
+				<div class="span6">
+					<div class="title"><h3>User LogIn <?php /*<?php echo Auth::user()->email; ?>*/ ?></h3></div>
+
+                    <?php echo Form::open(array('route' => array('users.doLogin'), 'method' => 'POST')); ?>
+
+                        <ul>
+
+                            <li>
+                                <?php echo Form::label('email', 'Email:'); ?>
+
+                                <?php echo Form::email('email', '', array('class'=>'createUser', 'placeholder'=>'awesome@example.com')); ?>
+
+                            </li>
+
+                            <li>
+                                <?php echo Form::label('password', 'Password:'); ?>
+
+                                <?php echo Form::password('password', array('class'=>'createUser')); ?>
+
+                            </li>
+
+                            <li>
+                                <?php echo Form::submit('Login', array('class' => 'btn')); ?>
+
+                            </li>
+                        </ul>
+                    <?php echo Form::close(); ?>
+
+
+                    <?php if($errors->any()): ?>
+                        <ul>
+                            <?php echo implode('', $errors->all('<li class="error">:message</li>')); ?>
+
+                            <?php echo $errors->first('email'); ?>
+                            <?php echo $errors->first('password'); ?>
+                        </ul>
+                    <?php endif; ?>
+                </div>
+                <!-- end: LogIn Form -->
+
+				<!-- start: Registration Redirect -->
+				<div class="span6">
+					<div class="title"><h3>User Registration</h3></div>
+					<h5>Already not a User!, please click the registration button below.</h5>
+					<?php /*<span class="glyphicon glyphicon-check"></span><button><?php echo link_to_route('users.create', 'Registration'); ?></button>*/ ?>
+                    <button type="button" class="btn btn-default btn-lg">
+                    <i class="glyphicon glyphicon-plus"></i> <?php echo link_to_route('users.create', 'Registration'); ?>
+
+                    </button>
+                </div>
+                <!-- end: Registration Button -->
+
+            </div>
+            <!-- end: Row -->
+            </div>
+            <!-- end: Container -->
+            </div>
+            <!-- end: Wrapper -->
+
+
+<h1>All Users</h1>
+
+<p><?php echo link_to_route('users.create', 'Add new user'); ?></p>
+
+<?php if($users->count()): ?>
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Username</th>
+        <th>Password</th>
+        <th>Email</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <?php foreach($users as $user): ?>
+                <tr>
+                    <td><?php echo $user->username; ?></td>
+          <td><?php echo $user->password; ?></td>
+          <td><?php echo $user->email; ?></td>
+                    <td><?php echo link_to_route('users.edit', 'Edit',
+ array($user->id), array('class' => 'btn btn-info')); ?></td>
+                    <td>
+          <?php echo Form::open(array('method'
+=> 'DELETE', 'route' => array('users.destroy', $user->id))); ?>
+
+                            <?php echo Form::submit('Delete', array('class'
+ => 'btn btn-danger')); ?>
+
+                        <?php echo Form::close(); ?>
+
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+
+        </tbody>
+
+    </table>
+<?php else: ?>
+    There are no users
+<?php endif; ?>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.user', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

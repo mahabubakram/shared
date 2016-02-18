@@ -1,0 +1,78 @@
+
+<?php $__env->startSection('main'); ?>
+
+	<!-- start: Wrapper -->
+	<div id="wrapper">
+
+		<!-- start: Container -->
+		<div class="container">
+
+			<!-- start: Row -->
+			<div class="row">
+
+				<!-- start: Login Form -->
+				<div class="span6">
+					<div class="title"><h3>User LogIn <?php /*<?php echo Auth::user()->email; ?>*/ ?></h3></div>
+
+                    <?php echo Form::open(array('route' => array('users.doLogin'), 'method' => 'POST')); ?>
+
+                        <ul>
+
+                            <li>
+                                <?php echo Form::label('email', 'Email:'); ?>
+
+                                <?php echo Form::email('email', '', array('class'=>'createUser', 'placeholder'=>'awesome@example.com')); ?>
+
+                            </li>
+                            <?php if($errors->any()): ?>
+                                <ul class="text-error">
+                                    <?php echo $errors->first('email'); ?>
+                                </ul>
+                            <?php endif; ?>
+
+                            <li>
+                                <?php echo Form::label('password', 'Password:'); ?>
+
+                                <?php echo Form::password('password', array('class'=>'createUser')); ?>
+
+                            </li>
+
+                            <?php if($errors->any()): ?>
+                                <ul class="text-error">
+                                    <?php echo $errors->first('password'); ?>
+                                </ul>
+                            <?php endif; ?>
+                            <li>
+                                <?php echo Form::submit('Login', array('class' => 'btn')); ?>
+
+                            </li>
+                        </ul>
+                    <?php echo Form::close(); ?>
+
+                </div>
+                <!-- end: LogIn Form -->
+
+				<!-- start: Registration Redirect -->
+				<div class="span6">
+					<div class="title"><h3>User Registration</h3></div>
+					<h5>Already not a User!, please click the registration button below.</h5>
+                    <a href="<?php echo action('UsersController@create');; ?>" class="btn btn-default btn-lg">Registration</a>
+                </div>
+                <!-- end: Registration Button -->
+
+            </div>
+            <!-- end: Row -->
+            </div>
+            <!-- end: Container -->
+            </div>
+            <!-- end: Wrapper -->
+
+
+
+<?php /*<h1>All Users</h1>*/ ?>
+
+<?php /*<p><?php echo link_to_route('users.create', 'Add new user'); ?></p>*/ ?>
+
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.user', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

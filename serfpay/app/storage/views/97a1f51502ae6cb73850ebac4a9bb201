@@ -1,0 +1,208 @@
+<?php $__env->startSection('main'); ?>
+
+
+	<!-- start: Wrapper -->
+	<div id="wrapper">
+
+		<!-- start: Container -->
+		<div class="container">
+
+        <!-- Show all bank details-->
+			<!-- start: Row -->
+			<div class="row">
+    			<!-- start: Edit User FORM -->
+	    		<div class="span8">
+                    <h1>Bank Information</h1>
+
+                    <?php if($banks->count()): ?>
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Account Name</th>
+                                <th>IBAN</th>
+                                <th>Account Number</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                        <?php foreach($banks as $bank): ?>
+                                <tr>
+                                    <td><?php echo $users->firstname; ?> <?php echo $users->lastname; ?></td>
+                                    <td><?php echo $bank->iban; ?></td>
+                                    <td><?php echo $bank->account_number; ?></td>
+                                    <td><?php echo $bank->status; ?></td>
+<?php /*                                    <td><?php echo link_to_route('settings.edit', 'Edit',
+                                    array($bank->id), array('class' => 'btn btn-primary')); ?></td>*/ ?>
+<?php /*                                    <td>
+                          <?php echo Form::open(array('method'
+                => 'DELETE', 'route' => array('users.destroy', $bank->id))); ?>
+
+                                            <?php echo Form::submit('Delete', array('class'
+                 => 'btn btn-danger')); ?>
+
+                                        <?php echo Form::close(); ?>
+
+                                    </td>*/ ?>
+                                </tr>
+                        <?php endforeach; ?>
+                        </tbody>
+
+                    </table>
+                    <?php else: ?>
+                        There are no Bank information added
+                    <?php endif; ?>
+
+
+                </div>
+                <!--End of Bank List-->
+
+
+				<!-- start: Registration Redirect -->
+				<div class="span4">
+					<div class="title"><h3>Add Bank Info</h3></div>
+					<h5 style="margin-left: 10%;">Want to add banking information! Please click.</h5>
+                    <button type="button" class="btn btn-default btn-lg" style="margin-left: 20%;">
+                    </span> <?php echo link_to_route('settings.bankCreate', 'Add Bank', array('id' => $users->id)); ?>
+
+                    </button>
+                </div>
+                <!-- end: Registration Button -->
+
+                <!-- end: Edit FORM-->
+            </div>
+            <!-- end: Row -->
+
+            <!-- start: Row -->
+			<div class="row">
+			<hr>
+    			<!-- start: Edit User FORM -->
+	    		<div class="span8">
+                    <h1>BKash Information</h1>
+
+                    <?php if($bkashes->count()): ?>
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Account Name</th>
+                                <th>Account Number</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                        <?php foreach($bkashes as $bkash): ?>
+                                <tr>
+                                    <td><?php echo $users->firstname; ?> <?php echo $users->lastname; ?></td>
+                                    <td><?php echo $bkash->account_number; ?></td>
+                                    <td><?php echo $bkash->status; ?></td>
+<?php /*                                    <td><?php echo link_to_route('settings.edit', 'Edit',
+                                    array($bank->id), array('class' => 'btn btn-primary')); ?></td>*/ ?>
+<?php /*                                    <td>
+                          <?php echo Form::open(array('method'
+                => 'DELETE', 'route' => array('users.destroy', $bank->id))); ?>
+
+                                            <?php echo Form::submit('Delete', array('class'
+                 => 'btn btn-danger')); ?>
+
+                                        <?php echo Form::close(); ?>
+
+                                    </td>*/ ?>
+                                </tr>
+                        <?php endforeach; ?>
+                        </tbody>
+
+                    </table>
+                    <?php else: ?>
+                        There are no Bkash account added
+                    <?php endif; ?>
+
+
+                </div>
+                <!--End of BKash List-->
+
+				<!-- start: Registration Redirect -->
+				<div class="span4">
+					<div class="title"><h3>Add Bkash Info</h3></div>
+					<h5 style="margin-left: 10%;">Want to add bkash information! Please click.</h5>
+                    <button type="button" class="btn btn-default btn-lg" style="margin-left: 20%;">
+                    </span> <?php echo link_to_route('settings.bkashCreate', 'Add BKash Info', array('id' => $users->id)); ?>
+
+                    </button>
+                </div>
+                <!-- end: Registration Button -->
+
+			</div>
+			<!-- end: Row -->
+
+
+            <!-- start: Row -->
+			<div class="row">
+			<hr>
+    			<!-- start: Edit User FORM -->
+	    		<div class="span8">
+                    <h1>Tele Information</h1>
+
+                    <?php if($phones->count()): ?>
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Account Name</th>
+                                <th>Phone Number</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                        <?php foreach($phones as $phone): ?>
+                                <tr>
+                                    <td><?php echo $users->firstname; ?> <?php echo $users->lastname; ?></td>
+                                    <td><?php echo $phone->phone_number; ?></td>
+                                    <td><?php echo $phone->status; ?></td>
+<?php /*                                    <td><?php echo link_to_route('settings.edit', 'Edit',
+                                    array($bank->id), array('class' => 'btn btn-primary')); ?></td>*/ ?>
+<?php /*                                    <td>
+                          <?php echo Form::open(array('method'
+                => 'DELETE', 'route' => array('users.destroy', $bank->id))); ?>
+
+                                            <?php echo Form::submit('Delete', array('class'
+                 => 'btn btn-danger')); ?>
+
+                                        <?php echo Form::close(); ?>
+
+                                    </td>*/ ?>
+                                </tr>
+                        <?php endforeach; ?>
+                        </tbody>
+
+                    </table>
+                    <?php else: ?>
+                        There are no Tele-Communication information added
+                    <?php endif; ?>
+
+
+                </div>
+                <!--End of BKash List-->
+
+				<!-- start: Registration Redirect -->
+				<div class="span4">
+					<div class="title"><h3>Add Tele-Communication Info</h3></div>
+					<h5 style="margin-left: 10%;">Want to add phone information! Please click.</h5>
+                    <button type="button" class="btn btn-default btn-lg" style="margin-left: 20%;">
+                    <i class="glyphicon glyphicon-trash"></i>
+                    </span> <?php echo link_to_route('settings.phoneCreate', 'Add Phone Number', array('id' => $users->id)); ?>
+
+                    </button>
+                </div>
+                <!-- end: Registration Button -->
+
+			</div>
+			<!-- end: Row -->
+
+        </div>
+        <!-- end: Container -->
+    </div>
+        <!-- end: Wrapper -->
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.user_account', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -1,0 +1,94 @@
+
+<?php $__env->startSection('main'); ?>
+
+        <!-- start: bypass :P validation error show -->
+
+        <?php if($errors->any()): ?>
+            <div class="flash alert">
+                <ul class="text-error">
+                    <?php echo implode('', $errors->all('<li class="error">:message</li>')); ?>
+
+                </ul>
+            </div>
+        <?php endif; ?>
+        <!-- end: bypass validation error show -->
+
+
+	<!-- start: Wrapper -->
+	<div id="wrapper">
+
+		<!-- start: Container -->
+		<div class="container">
+
+			<!-- start: Row -->
+			<div class="row">
+
+				<!-- start: Create User FORM -->
+				<div class="span6">
+					<div class="title"><h3>Insert Your Bank Information <?php echo $users->id; ?></h3></div>
+
+                    <?php /*<?php echo Form::open(array('route' => array('settings.bankStore',$users->id))); ?>*/ ?>
+                    <?php /*<?php echo Form::open(array('class' => 'form-horizontal', 'method' => 'post', 'action' => array('SettingsController@bankStore',$users->id))); ?>*/ ?>
+                     <?php echo Form::open(array('route' => array('settings.bankStore', $users->id))); ?>
+
+                        <ul>
+
+                            <li>
+                                <?php echo Form::label('bank_name', 'Bank:'); ?>
+
+                                <?php echo Form::text('bank_name', '', array('class'=>'createBank')); ?>
+
+                            </li>
+                            <?php if($errors->any()): ?>
+                                <ul class="text-error">
+                                    <?php echo $errors->first('bank_name'); ?>
+                                </ul>
+                            <?php endif; ?>
+
+                            <li>
+                                <?php echo Form::label('iban', 'IBAN:'); ?>
+
+                                <?php echo Form::text('iban', '', array('class'=>'createBank')); ?>
+
+                            </li>
+                            <?php if($errors->any()): ?>
+                                <ul class="text-error">
+                                    <?php /*<?php echo implode('', $errors->all('<li class="error">:message</li>')); ?>*/ ?>
+                                    <?php echo $errors->first('iban'); ?>
+                                </ul>
+                            <?php endif; ?>
+
+
+                            <li>
+                                <?php echo Form::label('account_number', 'Account Number:'); ?>
+
+                                <?php echo Form::text('account_number', '', array('class'=>'createBank')); ?>
+
+                            </li>
+                            <?php if($errors->any()): ?>
+                                <ul class="text-error">
+                                    <?php echo $errors->first('account_number'); ?>
+                                </ul>
+                            <?php endif; ?>
+
+                            <li>
+                                <?php echo Form::submit('Submit',array('class' => 'btn btn-primary')); ?>
+
+                            </li>
+                        </ul>
+                    <?php echo Form::close(); ?>
+
+
+                </div>
+                <!-- end: Create User Form -->
+            </div>
+            <!-- end: Row -->
+        </div>
+        <!-- end: Container -->
+        </div>
+        <!-- end: Wrapper -->
+
+
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.user_account', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

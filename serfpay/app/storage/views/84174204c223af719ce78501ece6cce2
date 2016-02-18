@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<!-- start: Meta -->
+	<meta charset="utf-8">
+	<title>SERF Payment Solution - An Easy Online Payment</title>
+	<meta name="description" content="SERF payment an easy online fast transaction in Bangladesh"/>
+	<meta name="keywords" content="payment, easy, online, bangladesh, transaction" />
+	<meta name="author" content="SERF Solution"/>
+	<!-- end: Meta -->
+	
+	<!-- start: Mobile Specific -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- end: Mobile Specific -->
+	
+	<!-- start: Facebook Open Graph -->
+	<meta property="og:title" content=""/>
+	<meta property="og:description" content=""/>
+	<meta property="og:type" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:image" content=""/>
+	<!-- end: Facebook Open Graph -->
+
+    <!-- start: CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Boogaloo">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Economica:700,400italic">
+	<!-- end: CSS -->
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+	
+	<!--start: Header -->
+	<header>
+		
+		<!--start: Container -->
+		<div class="container">
+			
+			<!--start: Row -->
+			<div class="row">
+					
+				<!--start: Logo -->
+				<div class="logo span3">
+						
+					<a class="brand" href="#"><img src="<?php echo asset('img/logoSERF.jpg'); ?>"></a>
+						
+				</div>
+				<!--end: Logo -->
+					
+				<!--start: Navigation -->
+				<?php echo $__env->make('includes.navigation', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+				<!--end: Navigation -->
+					
+			</div>
+			<!--end: Row -->
+			
+		</div>
+		<!--end: Container-->			
+			
+	</header>
+	<!--end: Header-->
+	
+	<!-- start: Page Title -->
+	<div id="page-title">
+
+		<div id="page-title-inner">
+
+			<!-- start: Container -->
+			<div class="container">
+
+				<h2><i class="ico-stats ico-white"></i>About Us</h2>
+
+			</div>
+			<!-- end: Container  -->
+
+		</div>	
+
+	</div>
+	<!-- end: Page Title -->
+	
+	<!--start: Wrapper-->
+	<div id="wrapper">
+				
+		<!--start: Container -->
+    	<div class="container">
+	
+			<!--start: Row -->
+	    	<div class="row">
+		
+				<div class="span8">
+					
+					<!-- start: About Us -->
+					<div id="about">
+						<div class="title"><h3>About Us</h3></div>
+						<p>
+                            SERF Payment is one of the most popular ways to get paid online and on mobile. Accept cards and several payments easily and more securely.
+						</p>
+						<p>
+							Online payment solution in Bangladesh is one of the most emerging needs now-a-days and SERF Payment Solution will fulfill the needs of recent needs.
+						</p>
+						<p>
+						SERF team will ensure the best services to the SERF Payment customers and will give the best, fast, secure and easy payment solution at your reach.
+						</p>
+					</div>
+					<!-- end: About Us -->
+
+					<!-- start: History -->
+					<div id="history">
+						<div class="title"><h3>History</h3></div>
+						<p>
+							<span class="dropcap color">O</span>ur line of work started when we have found that people of Bangladesh need the easy and fast online payment solution for their day to day life
+							from that urge we started developing this online solution.
+						</p>
+					</div>	
+					<!-- end: History -->
+
+					<!-- start: Team -->	
+					<div id="team">
+						
+						<div class="title"><h3>Team</h3></div>
+						
+						<!-- start: Row -->
+						<div class="row">
+						
+							<!-- start: About Member -->
+							<div class="span4">
+								<div class="avatar view-team">
+									<img src="<?php echo asset('img/image-not-found.png'); ?>" alt="team member">
+									<div class="mask">
+										<h2>About Me</h2>
+										<p>
+											Member 1 has been working in this project and developed the system to meet the customer needs with dedication.
+										</p>
+										<a href="#" class="info">My Personal Page</a>
+									</div>
+								</div>
+								<div class="clear"></div>
+								<div class="team-name">Member 1 <span> / Co-Worker</span></div>
+								<div class="social_profiles">
+									<ul class="social-bookmarks">
+										<li class="facebook"><a href="">facebook</a></li>
+										<li class="flickr"><a href="">flickr</a></li>
+										<li class="googleplus"><a href="#">googleplus</a></li>
+										<li class="linkedin"><a href="#">linkedin</a></li>
+										<li class="twitter"><a href="#">twitter</a></li>
+										<li class="pinterest"><a href="#">pinterest</a></li>
+									</ul>
+								</div>	
+							</div>
+							<!-- end: About Member -->
+
+							<!-- start: About Member -->
+							<div class="span4">
+								<div class="avatar view-team">
+									<img src="<?php echo asset('img/image-not-found.png'); ?>" alt="team member">
+									<div class="mask">
+										<h2>About Me</h2>
+										<p>
+											Member 2 has been working and also managing the project with Member 1.
+										</p>
+										<a href="#" class="info">My Personal Page</a>
+									</div>
+								</div>
+								<div class="clear"></div>
+								<div class="team-name">Member 2 <span> / Co-Worker</span></div>
+								<div class="social_profiles">
+									<ul class="social-bookmarks">
+										<li class="facebook"><a href="">facebook</a></li>
+										<li class="flickr"><a href="">flickr</a></li>
+										<li class="googleplus"><a href="#">googleplus</a></li>
+										<li class="linkedin"><a href="#">linkedin</a></li>
+										<li class="twitter"><a href="#">twitter</a></li>
+										<li class="pinterest"><a href="#">pinterest</a></li>
+									</ul>
+								</div>	
+							</div>
+							<!-- end: About Member -->	
+						
+						</div>
+						<!-- end: Row -->
+
+					</div>
+					<!-- end: Team -->
+					
+					
+				</div>	
+				
+				<div class="span4">
+					
+					<!-- start: Sidebar -->
+					<div id="sidebar">
+
+						<!-- start: Skills -->
+				       	<div class="title"><h3>We Ensure</h3></div>
+				       	<ul class="progress-bar">
+				        	<li>
+				            	<h5>Fastness ( 100% )</h5>
+				            	<div class="meter"><span></span></div><!-- Edite width here -->
+				          	</li>
+				        	<li>
+				            	<h5>Easiness ( 100% )</h5>
+				            	<div class="meter"><span></span></div><!-- Edite width here -->
+				          	</li>
+				          	<li>
+				            	<h5>Security ( 100% )</h5>
+				            	<div class="meter"><span style="width: 100%"></span></div><!-- Edite width here -->
+				          	</li>
+				          	<li>
+				            	<h5>Usability ( 100% )</h5>
+				            	<div class="meter"><span style="width: 100%"></span></div><!-- Edite width here -->
+				          	</li>
+				      	</ul>
+				      	<!-- end: Skills -->
+
+					</div>
+					<!-- end: Sidebar -->
+					
+				</div>
+				
+			</div>
+			<!--end: Row-->
+	
+		</div>
+		<!--end: Container-->
+				
+		<!--start: Container -->
+    	<div class="container">
+		
+			<hr>
+		
+		</div>
+		<!--end: Container-->	
+
+	</div>
+	<!-- end: Wrapper  -->			
+
+    <!-- start: Footer Menu -->
+    <?php echo $__env->make('includes.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+	<!-- end: Footer -->
+
+<!-- start: Java Script -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/jquery-1.8.2.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/flexslider.js"></script>
+<script src="js/carousel.js"></script>
+<script src="js/jquery.cslider.js"></script>
+<script src="js/slider.js"></script>
+<script def src="js/custom.js"></script>
+<!-- end: Java Script -->
+
+</body>
+</html>	

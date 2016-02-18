@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<!-- start: Meta -->
+	<meta charset="utf-8">
+	<title>SERF Payment Solution - An Easy Online Payment</title>
+	<meta name="description" content="SERF payment"/>
+	<meta name="keywords" content="Template, Theme, web, html5, css3, Bootstrap" />
+	<meta name="author" content="Mahabub Akram"/>
+	<!-- end: Meta -->
+	
+	<!-- start: Mobile Specific -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- end: Mobile Specific -->
+	
+	<!-- start: Facebook Open Graph -->
+	<meta property="og:title" content=""/>
+	<meta property="og:description" content=""/>
+	<meta property="og:type" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:image" content=""/>
+	<!-- end: Facebook Open Graph -->
+
+    <!-- start: CSS -->
+
+    <?php echo HTML::style('css/bootstrap.css');; ?>
+
+    <?php echo HTML::style('css/bootstrap-responsive.css');; ?>
+
+    <?php echo HTML::style('css/style.css');; ?>
+
+    <?php echo HTML::style('css/fonts/glyphicons-halflings-regular.eot');; ?>
+
+    <?php echo HTML::style('css/fonts/glyphicons-halflings-regular.ttf');; ?>
+
+    <?php echo HTML::style('css/fonts/glyphicons-halflings-regular.svg');; ?>
+
+    <?php echo HTML::style('css/fonts/glyphicons-halflings-regular.woff');; ?>
+
+    <?php /*<link href="css/bootstrap.css" rel="stylesheet">*/ ?>
+    <?php /*<link href="css/bootstrap-responsive.css" rel="stylesheet">*/ ?>
+	<?php /*<link href="css/style.css" rel="stylesheet">*/ ?>
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Boogaloo">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Economica:700,400italic">
+    <link rel="stylesheet" type="text/css" href="../../../public/css/fonts/glyphicons-halflings-regular.eot">
+    <link rel="stylesheet" type="text/css" href="../../../public/css/fonts/glyphicons-halflings-regular.ttf">
+    <link rel="stylesheet" type="text/css" href="../../../public/css/fonts/glyphicons-halflings-regular.svg">
+    <link rel="stylesheet" type="text/css" href="../../../public/css/fonts/glyphicons-halflings-regular.woff">
+
+    <link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.svg">
+    <link rel="stylesheet" type="text/css" href=" https://netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.woff">
+    <link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.ttf">
+    <link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.eot">
+
+	<!-- end: CSS -->
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+	
+	<!--start: Header -->
+	<header>
+		
+		<!--start: Container -->
+		<div class="container">
+			
+			<!--start: Row -->
+			<div class="row">
+					
+				<!--start: Logo -->
+				<div class="logo span3">
+						
+					<a class="brand" href="<?php echo action('HomeController@home');; ?>"><img src="<?php echo asset('img/logoSERF.jpg'); ?>" alt="website logo" id="bdWallet-logo"></a>
+						
+				</div>
+				<!--end: Logo -->
+					
+				<!--start: Navigation -->
+				<?php echo $__env->make('includes.navigation', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+				<!--end: Navigation -->
+					
+			</div>
+			<!--end: Row -->
+			
+		</div>
+		<!--end: Container-->			
+			
+	</header>
+	<!--end: Header-->
+
+
+	<!-- start: Wrapper -->
+	<div id="wrapper">
+
+		<!-- start: Container -->
+		<div class="container">
+
+			<div class="row">
+                <?php if(Session::has('message')): ?>
+                    <div class="flash alert">
+                        <p><?php echo Session::get('message'); ?></p>
+                    </div>
+                <?php endif; ?>
+            <?php echo $__env->yieldContent('main'); ?>
+
+			</div>
+
+		</div>
+		<!-- end: Container -->
+
+  	</div>
+	<!-- end: Wrapper  -->
+
+
+	<!-- start: Footer -->
+	<?php echo $__env->make('includes.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+	<!-- end: Footer -->
+
+
+<!-- start: Java Script -->
+<!-- Placed at the end of the document so the pages load faster -->
+<?php /*<script src="js/jquery-1.8.2.js"></script>*/ ?>
+<?php /*<script src="js/bootstrap.js"></script>*/ ?>
+<?php /*<script src="js/flexslider.js"></script>*/ ?>
+<?php /*<script src="js/carousel.js"></script>*/ ?>
+<?php /*<script src="js/jquery.cslider.js"></script>*/ ?>
+<?php /*<script src="js/slider.js"></script>*/ ?>
+<?php /*<script def src="js/custom.js"></script>*/ ?>
+<?php echo HTML::script('js/jquery-1.8.2.js');; ?>
+
+<?php echo HTML::script('js/bootstrap.js');; ?>
+
+<?php echo HTML::script('js/flexslider.js');; ?>
+
+<?php echo HTML::script('js/carousel.js');; ?>
+
+<?php echo HTML::script('js/jquery.cslider.js');; ?>
+
+<?php echo HTML::script('js/slider.js');; ?>
+
+<?php echo HTML::script('js/custom.js');; ?>
+
+<!-- end: Java Script -->
+
+</body>
+</html>

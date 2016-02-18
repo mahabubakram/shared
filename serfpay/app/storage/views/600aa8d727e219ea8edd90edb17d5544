@@ -1,0 +1,34 @@
+ <div class="span9">
+     <div class="navbar navbar-inverse">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <li <?php echo Request::path() == 'home' ? 'class=active' : '';; ?>><a href="<?php echo action('HomeController@home');; ?>">Home</a></li>
+                        <li <?php echo Request::path() == 'about' ? 'class=active' : '';; ?>><a href="<?php echo action('HomeController@about');; ?>">About</a></li>
+                        <li <?php echo Request::path() == 'support' ? 'class=active' : '';; ?>><a href="<?php echo action('HomeController@support');; ?>">Support & Contact</a></li>
+                        <li <?php echo Request::path() == 'users' ? 'class=active' : '';; ?>><a href="<?php echo action('UsersController@index'); ?>">SignIn</a></li>
+
+                        <?php if(isset(Auth::user()->email)): ?>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo Auth::user()->email; ?><b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="<?php echo action('UsersController@show',Auth::user()->id);; ?>">My Account</a></li>
+                                <li><a href="<?php echo action('SettingsController@show',Auth::user()->id);; ?>">My Settings</a></li>
+                                <li class="divider"></li>
+                                <li class="nav-header">Nav header</li>
+                                <li><a href="<?php echo action('UsersController@doLogout');; ?>">Logout</a></li>
+                            </ul>
+                        </li>
+                        <?php endif; ?>
+                    </ul>
+                </div>
+            </div>
+        </div>
+     </div>
+ </div>
